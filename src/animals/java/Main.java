@@ -3,28 +3,41 @@ package animals.java;
 public class Main {
 
 	public static void main(String[] args) {
-		
-		
-		Delfino d = new Delfino();
-		Aquila a = new Aquila();
-		Cane c = new Cane();
-		Passerotto p = new Passerotto();
+
+	
+		Delfino delfino = new Delfino();
+		Aquila aquila = new Aquila();
+		Cane cane = new Cane();
+		Passerotto passerotto = new Passerotto();
 		
 		// Delfino
-		
-		d.mangia();
+		delfino.mangia();
 		
 		// Aquila
-		
-		a.mangia();
+		aquila.mangia();
 		
 		// Cane
-	
-		c.dormi();
+		cane.dormi();
 		
 		// Passerotto
+		passerotto.verso();
 		
-		p.verso();
+		// METODI INTERFACCIA
+		
+		faiVolare(passerotto);
+		faiVolare(aquila);
+		faiNuotare(delfino);
+		faiNuotare(cane);
 	}
+
+	public static void faiVolare(IVolante Animale) {
+		Animale.Vola();
+	}
+	
+	
+	public static void faiNuotare(INuotante Animale) {
+		Animale.Nuota();
+	}
+	
 
 }
